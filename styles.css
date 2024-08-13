@@ -8,9 +8,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    box-sizing: border-box;
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     background-color: #fff;
     padding: 20px;
@@ -18,17 +23,26 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     width: 90%;
+    max-height: 90vh;
+    overflow: auto;
+    box-sizing: border-box;
 }
 
 h1 {
     color: #d9534f;
     margin-bottom: 20px;
+    font-size: 2rem;
 }
 
 .photo img {
     max-width: 100%;
     border-radius: 10px;
     margin-bottom: 20px;
+}
+
+.message {
+    text-align: left;
+    width: 100%;
 }
 
 .message p {
@@ -40,4 +54,15 @@ h1 {
 .message p:last-child {
     text-align: right;
     margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .message p {
+        font-size: 16px;
+    }
 }
